@@ -13,10 +13,13 @@ export class AllBlocksComponent implements OnInit {
 
     _showFlatsEnable: boolean[] = [];
 
+    _page: number = 1;
+    _size: number = 10;
+
     constructor(private _blocksService: BlocksService) {}
 
     ngOnInit() {
-        this._blocks = this._blocksService.getAllBlocks();
+        this._blocks = this._blocksService.getAllBlocks(this._page, this._size);
         this._showFlatsEnable = Array(this._blocks.length).fill(false);
     }
 

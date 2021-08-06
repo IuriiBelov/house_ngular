@@ -10,9 +10,9 @@ export class BlocksService {
 
   constructor(private http: HttpClient){}
 
-  getAllBlocks(): Block[] {
+  getAllBlocks(page: number, size: number): Block[] {
 
-    const url: string = "http://localhost:8080/blocks?page=1&size=5";
+    const url: string = "http://localhost:8080/blocks?page=" + page + "&size=" + size;
 
     let allBlocks: Block[] = [];
 

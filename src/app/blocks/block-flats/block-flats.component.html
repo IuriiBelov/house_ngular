@@ -1,9 +1,12 @@
-<h1>Flats of block:</h1>
+<h6>Flats of block:</h6>
 <table>
     <tr>
         <th>Number</th>
         <th>Block</th>
         <th>Floor</th>
+        <th>All area</th>
+        <th>Living area</th>
+        <th>Owners</th>
     </tr>
     <tr *ngFor="let flat of _flats">
         <td>
@@ -14,6 +17,17 @@
         </td>
         <td>
             {{flat.floor}}
+        </td>
+        <td>
+            {{flat.flatMeasurements.allArea}}
+        </td>
+        <td>
+            {{flat.flatMeasurements.livingArea}}
+        </td>
+        <td>
+            <div *ngFor="let ownerName of flat.ownersNames">
+                {{ownerName.firstName}} {{ownerName.lastName}}
+            </div>
         </td>
     </tr>
 </table>

@@ -1,26 +1,26 @@
 export class OwnerName {
 
-    private firstName: string;
-    private lastName: string;
+    private _firstName: string;
+    private _lastName: string;
 
     constructor(firstName: string, lastName: string) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this._firstName = firstName;
+        this._lastName = lastName;
     }
 
-    public get getFirstName(): string {
-        return this.firstName;
+    public get firstName(): string {
+        return this._firstName;
     }
 
-    public get getLastName(): string {
-        return this.lastName;
+    public get lastName(): string {
+        return this._lastName;
     }
 
-    public set setFirstName(firstName: string) {
-        this.firstName = firstName;
+    public set firstName(firstName: string) {
+        this._firstName = firstName;
     }
 
-    public set setLastName(lastName: string) {
-        this.lastName = lastName;
+    public set lastName(lastName: string) {
+        this._lastName = lastName;
     }
 }

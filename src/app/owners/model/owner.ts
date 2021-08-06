@@ -3,12 +3,12 @@ import { OwnerName } from './owner-name';
 export class Owner {
 
     private id: number;
-    private name: OwnerName;
+    private ownerName: OwnerName;
     private phoneNumber: string;
     private flatsNumbers: number[];
 
     constructor(id: number, name: OwnerName, phoneNumber: string, flatsNumbers: number[]) {
-        this.name = name;
+        this.ownerName = name;
         this.phoneNumber = phoneNumber;
         this.flatsNumbers = flatsNumbers;
     }
@@ -18,7 +18,7 @@ export class Owner {
     }
 
     public get getName(): OwnerName {
-        return this.name;
+        return this.ownerName;
     }
 
     public get getPhoneNumber(): string {
@@ -30,7 +30,7 @@ export class Owner {
     }
 
     public set setName(name: OwnerName) {
-        this.name = name;
+        this.ownerName = name;
     }
 
     public set setPhoneNumber(phoneNumber: string) {
