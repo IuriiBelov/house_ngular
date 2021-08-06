@@ -1,0 +1,29 @@
+<h1>Bills:</h1>
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Flat</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let bill of bills">
+        <td>
+            {{bill.billNumber}}
+        </td>
+        <td>
+            {{bill.flatNumber}}
+        </td>
+        <td>
+            {{bill.date}}
+        </td>
+        <td>
+            {{bill.billStatus}}
+        </td>
+        <td>
+            <button>Update</button>
+        </td>
+        <td>
+            <button>Delete</button>
+        </td>
+    </tr>
+</table>
