@@ -1,0 +1,13 @@
+.section {
+    height: 10%;
+    background: cornflowerblue;
+}
+
+.header-element {
+    height: 100%;
+    width: 10%;
+    background: cornflowerblue;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+}

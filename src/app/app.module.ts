@@ -10,6 +10,7 @@ import { BillsModule } from './bills/bills.module';
 import { BlocksModule } from './blocks/blocks.module';
 import { FlatsModule } from './flats/flats.module';
 import { OwnersModule } from './owners/owners.module';
+import { HeaderModule } from "./header/header.module";
 
 import { AppComponent }   from './app.component';
 import { DateFormatPipe } from './bills/dateFormat.pipe';
@@ -27,8 +28,8 @@ const appRoutes: Routes =[
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, FormsModule, HttpClientModule, BillsModule, BlocksModule,
-                    FlatsModule, OwnersModule, RouterModule.forRoot(appRoutes) ],
+    imports: [BrowserModule, FormsModule, HttpClientModule, BillsModule, BlocksModule,
+        FlatsModule, OwnersModule, RouterModule.forRoot(appRoutes), HeaderModule],
     declarations: [ AppComponent, DateFormatPipe ],
     bootstrap:    [ AppComponent ]
 })
