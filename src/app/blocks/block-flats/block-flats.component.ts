@@ -10,13 +10,12 @@ import {BlocksService} from "../blocks.service";
 export class BlockFlatsComponent implements OnInit {
 
   @Input() _blockId: number;
-  @Input() _blockNumber: number;
 
   _flats: Flat[] = [];
 
   constructor(private _blocksService: BlocksService) { }
 
   ngOnInit(): void {
-    this._flats = this._blocksService.getBlockFlats(1);
+    this._flats = this._blocksService.getBlockFlats(this._blockId);
   }
 }

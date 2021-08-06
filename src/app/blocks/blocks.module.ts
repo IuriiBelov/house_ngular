@@ -4,9 +4,10 @@ import { FormsModule }   from '@angular/forms';
 
 import { AllBlocksComponent }   from './all-blocks/all-blocks.component';
 import { BlockFlatsComponent } from './block-flats/block-flats.component';
+import {RouterModule, Routes} from "@angular/router";
 
 @NgModule({
-    imports:      [ BrowserModule, FormsModule ],
+    imports: [BrowserModule, FormsModule, RouterModule],
     declarations: [ AllBlocksComponent, BlockFlatsComponent ],
     exports:      [ AllBlocksComponent ]
 })

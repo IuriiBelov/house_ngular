@@ -5,7 +5,14 @@
         <th>Flats</th>
     </tr>
     <tr *ngFor="let block of _blocks">
-        <td>{{block.blockNumber}}</td>
-        <td></td>
+        <td>
+            {{block.blockNumber}}
+        </td>
+        <td>
+            <button (click)="showFlats(block.id)">Show flats</button>
+            <div *ngIf="_showFlatsEnable[block.id]">
+                <block-flats-component [_blockId]="block.id"></block-flats-component>
+            </div>
+        </td>
     </tr>
 </table>

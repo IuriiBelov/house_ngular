@@ -11,9 +11,17 @@ export class AllBlocksComponent implements OnInit {
 
     _blocks: Block[] = [];
 
+    _showFlatsEnable: boolean[] = [];
+
     constructor(private _blocksService: BlocksService) {}
 
     ngOnInit() {
         this._blocks = this._blocksService.getAllBlocks();
+        this._showFlatsEnable = Array(this._blocks.length).fill(false);
+    }
+
+    showFlats(id: number) {
+        let idx: number = this._blocks.findIndex(b => b.id === id) + 1;
+        this._showFlatsEnable[idx] = !this._showFlatsEnable[idx];
     }
 }

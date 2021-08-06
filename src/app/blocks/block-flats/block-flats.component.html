@@ -1,7 +1,19 @@
-<h1>Flats of blocks:</h1>
+<h1>Flats of block:</h1>
 <table>
     <tr>
         <th>Number</th>
-        <th></th>
+        <th>Block</th>
+        <th>Floor</th>
+    </tr>
+    <tr *ngFor="let flat of _flats">
+        <td>
+            {{flat.flatNumber}}
+        </td>
+        <td>
+            {{flat.blockNumber}}
+        </td>
+        <td>
+            {{flat.floor}}
+        </td>
     </tr>
 </table>

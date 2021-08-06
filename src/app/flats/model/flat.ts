@@ -3,64 +3,64 @@ import {OwnerName} from "../../owners/model/owner-name";
 
 export class Flat {
 
-    private readonly id: number;
-    private flatNumber: number;
-    private blockNumber: number;
-    private floor: number;
-    private flatMeasurements: FlatMeasurements;
-    private ownersNames: OwnerName[];
+    private readonly _id: number;
+    private _flatNumber: number;
+    private _blockNumber: number;
+    private _floor: number;
+    private _flatMeasurements: FlatMeasurements;
+    private _ownersNames: OwnerName[];
 
     constructor(id: number, flatNumber: number, blockNumber: number, floor: number,
                 flatMeasurements: FlatMeasurements, ownersNames: OwnerName[]) {
-        this.id = id;
-        this.flatNumber = flatNumber;
-        this.blockNumber = blockNumber;
-        this.floor = floor;
-        this.flatMeasurements = flatMeasurements;
-        this.ownersNames = ownersNames;
+        this._id = id;
+        this._flatNumber = flatNumber;
+        this._blockNumber = blockNumber;
+        this._floor = floor;
+        this._flatMeasurements = flatMeasurements;
+        this._ownersNames = ownersNames;
     }
 
-    public get getId(): number {
-        return this.id;
+    public get id(): number {
+        return this._id;
     }
 
-    public get getFlatNumber(): number {
-        return this.flatNumber;
+    public get flatNumber(): number {
+        return this._flatNumber;
     }
 
-    public get getBlockNumber(): number {
-        return this.blockNumber;
+    public get blockNumber(): number {
+        return this._blockNumber;
     }
 
-    public get getFloor(): number {
-        return this.floor;
+    public get floor(): number {
+        return this._floor;
     }
 
-    public get getFlatMeasurements(): FlatMeasurements {
-        return this.flatMeasurements;
+    public get flatMeasurements(): FlatMeasurements {
+        return this._flatMeasurements;
     }
 
-    public get getOwnersNames(): OwnerName[] {
-        return this.ownersNames;
+    public get ownersNames(): OwnerName[] {
+        return this._ownersNames;
     }
 
-    public set setFlatNumber(flatNumber: number) {
-        this.flatNumber = flatNumber;
+    public set flatNumber(flatNumber: number) {
+        this._flatNumber = flatNumber;
     }
 
-    public set setBlockNumber(blockNumber: number) {
-        this.blockNumber = blockNumber;
+    public set blockNumber(blockNumber: number) {
+        this._blockNumber = blockNumber;
     }
 
-    public set setFloor(floor: number) {
-        this.floor = floor;
+    public set floor(floor: number) {
+        this._floor = floor;
     }
 
-    public set setFlatMeasurements(flatMeasurements: FlatMeasurements) {
-        this.flatMeasurements = flatMeasurements;
+    public set flatMeasurements(flatMeasurements: FlatMeasurements) {
+        this._flatMeasurements = flatMeasurements;
     }
 
-    public set setOwnersNames(ownersNames: OwnerName[]) {
-        this.ownersNames = ownersNames;
+    public set ownersNames(ownersNames: OwnerName[]) {
+        this._ownersNames = ownersNames;
     }
 }
