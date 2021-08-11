@@ -1,5 +1,6 @@
 import { FlatMeasurements } from './flat-measurements';
 import {OwnerName} from "../../owners/model/owner-name";
+import {Bill} from "../../bills/model/bill";
 
 export class Flat {
 
@@ -8,15 +9,17 @@ export class Flat {
     private _blockNumber: number;
     private _floor: number;
     private _flatMeasurements: FlatMeasurements;
+    private _bills: Bill[] = [];
     private _ownersNames: OwnerName[];
 
     constructor(id: number, flatNumber: number, blockNumber: number, floor: number,
-                flatMeasurements: FlatMeasurements, ownersNames: OwnerName[]) {
+                flatMeasurements: FlatMeasurements, bills: Bill[], ownersNames: OwnerName[]) {
         this._id = id;
         this._flatNumber = flatNumber;
         this._blockNumber = blockNumber;
         this._floor = floor;
         this._flatMeasurements = flatMeasurements;
+        this._bills = bills;
         this._ownersNames = ownersNames;
     }
 
@@ -40,6 +43,10 @@ export class Flat {
         return this._flatMeasurements;
     }
 
+    public get bills(): Bill[] {
+        return this._bills;
+    }
+
     public get ownersNames(): OwnerName[] {
         return this._ownersNames;
     }
@@ -58,6 +65,10 @@ export class Flat {
 
     public set flatMeasurements(flatMeasurements: FlatMeasurements) {
         this._flatMeasurements = flatMeasurements;
+    }
+
+    public set bills(bills: Bill[]) {
+        this._bills = bills;
     }
 
     public set ownersNames(ownersNames: OwnerName[]) {

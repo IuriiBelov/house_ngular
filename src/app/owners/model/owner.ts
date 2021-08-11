@@ -2,42 +2,43 @@ import { OwnerName } from './owner-name';
 
 export class Owner {
 
-    private id: number;
-    private ownerName: OwnerName;
-    private phoneNumber: string;
-    private flatsNumbers: number[];
+    private _id: number;
+    private _ownerName: OwnerName;
+    private _phoneNumber: string;
+    private _flatsNumbers: number[];
 
     constructor(id: number, name: OwnerName, phoneNumber: string, flatsNumbers: number[]) {
-        this.ownerName = name;
-        this.phoneNumber = phoneNumber;
-        this.flatsNumbers = flatsNumbers;
+        this._id = id;
+        this._ownerName = name;
+        this._phoneNumber = phoneNumber;
+        this._flatsNumbers = flatsNumbers;
     }
 
-    public get getId(): number {
-        return this.id;
+    public get id(): number {
+        return this._id;
     }
 
-    public get getName(): OwnerName {
-        return this.ownerName;
+    public get name(): OwnerName {
+        return this._ownerName;
     }
 
-    public get getPhoneNumber(): string {
-        return this.phoneNumber;
+    public get phoneNumber(): string {
+        return this._phoneNumber;
     }
 
-    public get getFlatsNumbers(): number[] {
-        return this.flatsNumbers;
+    public get flatsNumbers(): number[] {
+        return this._flatsNumbers;
     }
 
-    public set setName(name: OwnerName) {
-        this.ownerName = name;
+    public set name(name: OwnerName) {
+        this._ownerName = name;
     }
 
-    public set setPhoneNumber(phoneNumber: string) {
-        this.phoneNumber = phoneNumber;
+    public set phoneNumber(phoneNumber: string) {
+        this._phoneNumber = phoneNumber;
     }
 
-    public set setFlatsNumbers(flatsNumbers: number[]) {
-        this.flatsNumbers = flatsNumbers;
+    public set flatsNumbers(flatsNumbers: number[]) {
+        this._flatsNumbers = flatsNumbers;
     }
 }

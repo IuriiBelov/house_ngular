@@ -1,0 +1,46 @@
+<h1>Flats:</h1>
+Page number:
+<input type="number" [(ngModel)]="_page" placeholder="page">
+Elements per page:
+<input type="number" [(ngModel)]="_size" placeholder="size">
+<button (click)="showFlats()">Show flats</button>
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Block</th>
+        <th>Floor</th>
+        <th>All area</th>
+        <th>Living area</th>
+        <th>Bills</th>
+        <th>Owners</th>
+    </tr>
+    <tr *ngFor="let flat of _flats">
+        <td>
+            {{flat.flatNumber}}
+        </td>
+        <td>
+            {{flat.blockNumber}}
+        </td>
+        <td>
+            {{flat.floor}}
+        </td>
+        <td>
+            {{flat.flatMeasurements.allArea}}
+        </td>
+        <td>
+            {{flat.flatMeasurements.livingArea}}
+        </td>
+        <td>
+            <button (click)="showBills(flat.id)">Show bills</button>
+            <div *ngIf="_showBillsEnable[flat.id]">
+                <flat-bills-component [_flatId]="flat.id"></flat-bills-component>
+            </div>
+        </td>
+        <td>
+            <button (click)="showOwners(flat.id)">Show owners</button>
+            <div *ngIf="_showOwnersEnable[flat.id]">
+                <flat-owners-component [_flatId]="flat.id"></flat-owners-component>
+            </div>
+        </td>
+    </tr>
+</table>

@@ -15,21 +15,22 @@ import { HeaderModule } from "./header/header.module";
 import { AppComponent }   from './app.component';
 import { DateFormatPipe } from './bills/dateFormat.pipe';
 
-import { BillsComponent } from './bills/bills.component';
+import { AllBillsComponent } from './bills/all-bills/all-bills.component';
 import { AllBlocksComponent } from './blocks/all-blocks/all-blocks.component';
-import { FlatsComponent } from './flats/flats.component';
-import { OwnersComponent } from './owners/owners.component';
+import { AllFlatsComponent } from './flats/all-flats/all-flats.component';
+import { AllOwnersComponent } from './owners/all-owners/all-owners.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes =[
-    { path: 'bills', component: BillsComponent },
+    { path: 'bills', component: AllBillsComponent },
     { path: 'blocks', component: AllBlocksComponent },
-    { path: 'flats', component: FlatsComponent },
-    { path: 'owners', component: OwnersComponent }
+    { path: 'flats', component: AllFlatsComponent },
+    { path: 'owners', component: AllOwnersComponent }
 ];
 
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpClientModule, BillsModule, BlocksModule,
-        FlatsModule, OwnersModule, RouterModule.forRoot(appRoutes), HeaderModule],
+        FlatsModule, OwnersModule, RouterModule.forRoot(appRoutes), HeaderModule, BrowserAnimationsModule],
     declarations: [ AppComponent, DateFormatPipe ],
     bootstrap:    [ AppComponent ]
 })

@@ -3,13 +3,13 @@ import { BillStatus } from './bill-status';
 export class Bill {
 
     private readonly _id: number;
-    private _billNumber?: number;
-    private _flatNumber?: number;
-    private _date?: Date;
-    private _billStatus?: BillStatus;
+    private _billNumber: number;
+    private _flatNumber: number;
+    private _date: Date;
+    private _billStatus: BillStatus;
 
-    constructor(id: number, billNumber?: number, flatNumber?: number, date?: Date,
-                billStatus?: BillStatus) {
+    constructor(id: number, billNumber: number, flatNumber: number, date: Date,
+                billStatus: BillStatus) {
         this._id = id;
         this._billNumber = billNumber;
         this._flatNumber = flatNumber;

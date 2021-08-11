@@ -3,6 +3,7 @@ import {Bill} from "./model/bill";
 import {BillStatus} from "./model/bill-status";
 import {HttpClient} from "@angular/common/http";
 import {DateFormatPipe} from "./dateFormat.pipe";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,8 @@ export class BillsService {
 
   _bills: Bill[] = [];
 
-  getBills(): Bill[] {
+  getBills(): Observable<any> {
 
-    //this.bills.push(new Bill(1, 1, 1, new Date(), BillStatus.Paid));
-    //this.bills.push(new Bill(2, 1, 2, new Date(), BillStatus.Paid));
-    //this.bills.push(new Bill(3, 1, 3, new Date(), BillStatus.Paid));
-
-    return this._bills;
+    return this.http.get('http://localhost:8080/bills/1');
   }
 }

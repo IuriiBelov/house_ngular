@@ -1,0 +1,18 @@
+<h6>Owners of flat:</h6>
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+    </tr>
+    <tr *ngFor="let owner of _owners">
+        <td>
+            {{owner.name.firstName}}
+        </td>
+        <td>
+            {{owner.name.lastName}}
+        </td>
+        <td>
+            {{owner.phoneNumber}}
+        </td>
+</table>

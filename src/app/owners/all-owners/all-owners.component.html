@@ -1,0 +1,35 @@
+<h1>Owners:</h1>
+Page number:
+<input type="number" [(ngModel)]="_page" placeholder="page">
+Elements per page:
+<input type="number" [(ngModel)]="_size" placeholder="size">
+<button (click)="showOwners()">Show owners</button>
+<table>
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+        <th>Flats</th>
+    </tr>
+    <tr *ngFor="let owner of _owners">
+        <td>
+            {{owner.name.firstName}}
+        </td>
+        <td>
+            {{owner.name.lastName}}
+        </td>
+        <td>
+            {{owner.phoneNumber}}
+        </td>
+        <td>
+            {{owner.flatsNumbers}}
+        </td>
+        <td>
+            <button (click)="deleteOwner(owner.id)">Delete</button>
+        </td>
+    </tr>
+</table>
+<button (click)="enableCreatingOwner()">Create new owner</button>
+<div *ngIf="_ownerCreatingEnable">
+    <owner-create-component></owner-create-component>
+</div>

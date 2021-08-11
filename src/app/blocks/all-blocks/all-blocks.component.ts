@@ -23,7 +23,12 @@ export class AllBlocksComponent implements OnInit {
         this._showFlatsEnable = Array(this._blocks.length).fill(false);
     }
 
-    showFlats(id: number) {
+    showBlocks(): void {
+        this._blocks = this._blocksService.getAllBlocks(this._page, this._size);
+        this._showFlatsEnable = Array(this._blocks.length).fill(false);
+    }
+
+    showFlats(id: number): void {
         let idx: number = this._blocks.findIndex(b => b.id === id) + 1;
         this._showFlatsEnable[idx] = !this._showFlatsEnable[idx];
     }

@@ -1,4 +1,4 @@
-<h1>Bills:</h1>
+<h6>Bills of flat:</h6>
 <table>
     <tr>
         <th>Number</th>
@@ -6,7 +6,7 @@
         <th>Date</th>
         <th>Status</th>
     </tr>
-    <tr *ngFor="let bill of bills">
+    <tr *ngFor="let bill of _bills">
         <td>
             {{bill.billNumber}}
         </td>
@@ -18,12 +18,6 @@
         </td>
         <td>
             {{bill.billStatus}}
-        </td>
-        <td>
-            <button>Update</button>
-        </td>
-        <td>
-            <button>Delete</button>
         </td>
     </tr>
 </table>

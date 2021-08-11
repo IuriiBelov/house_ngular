@@ -1,6 +1,9 @@
 <h1>Blocks:</h1>
-<input [(ngModel)]="_page" placeholder="name">
-<input [(ngModel)]="_size" placeholder="name">
+Page number:
+<input type="number" [(ngModel)]="_page" placeholder="page">
+Elements per page:
+<input type="number" [(ngModel)]="_size" placeholder="size">
+<button (click)="showBlocks()">Show blocks</button>
 <table>
     <tr>
         <th>Number</th>
